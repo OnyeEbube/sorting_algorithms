@@ -2,8 +2,8 @@
 
 /**
  * swap - Swap two integers in an array.
- * @a: The first integer to swap.
- * @b: The second integer to swap.
+ * @x: The first integer to swap.
+ * @y: The second integer to swap.
  */
 void swap(int *x, int *y)
 {
@@ -26,6 +26,9 @@ void swap(int *x, int *y)
 void shell_sort(int *array, size_t size)
 {
 	size_t gap, i, j;
+
+	if (array == NULL || size < 2)
+		return;
 
 	for (gap = 1; gap < (size / 3);)
 		gap = gap * 3 + 1;
